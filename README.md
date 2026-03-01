@@ -1,3 +1,7 @@
+<img width="1320" height="966" alt="image" src="https://github.com/user-attachments/assets/39a01122-e15a-46e9-be09-394b755599ae" />
+
+
+
 🏥 Multi-Role Firebase Flutter App
 
 This project demonstrates a role-based access system using Flask + Firebase + Flutter:
@@ -7,6 +11,8 @@ Roles: Doctor, Patient, Counselor
 Users are created via a Flask admin dashboard
 
 Flutter app shows role-specific screens
+
+
 
 🔐 Firestore Security Rules
 
