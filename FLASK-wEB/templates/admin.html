@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <!--  Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>
+      <span class="material-icons">admin_panel_settings</span>
+      Admin Dashboard
+    </h1>
+
+    <div class="card">
+      <h2><span class="material-icons">person_add</span> Create Account</h2>
+
+      <div class="input-group">
+        <span class="material-icons">badge</span>
+        <input type="text" id="name" placeholder="Full Name" required/>
+      </div>
+
+      <div class="input-group">
+        <span class="material-icons">email</span>
+        <input type="email" id="email" placeholder="Email"  required />
+      </div>
+
+      <div class="input-group">
+        <span class="material-icons">lock</span>
+        <input type="password" id="password" placeholder="Password (min 6 chars)"  required />
+      </div>
+
+      <div class="input-group">
+        <span class="material-icons">groups</span>
+        <select id="role">
+          <option value="">-- Select Role --</option>
+          <option value="doctor">Doctor</option>
+          <option value="patient">Patient</option>
+          <option value="counselor">Counselor</option>
+        </select>
+      </div>
+
+      <button class="primary-btn" onclick="createUser()">
+        <span class="material-icons">add_circle</span>
+        Create Account
+      </button>
+
+      <div id="message"></div>
+    </div>
+
+    <div class="card">
+      <h2><span class="material-icons">people</span> Existing Users</h2>
+
+      <button class="refresh-btn" onclick="loadUsers()">
+        <span class="material-icons">refresh</span>
+        Refresh Users
+      </button>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+          </tr>
+        </thead>
+        <tbody id="userBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="../static/app.js"></script>
+</body>
+</html>
